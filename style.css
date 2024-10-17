@@ -1,12 +1,16 @@
-/* Basic styling for the game */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #87CEEB 0%, #87CEFA 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ff;
-    font-family: Arial, sans-serif;
 }
 
 #game-container {
@@ -14,22 +18,23 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: #87CEFA; /* Light blue sky */
-    border: 2px solid #000;
+    background-color: #F0F8FF;
+    border: 5px solid #000;
 }
 
 #basket {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 100px;
+    width: 150px;
     height: 50px;
-    background-image: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-    <rect width="100" height="50" fill="#8B4513" stroke="#654321" stroke-width="4" rx="10" />
-</svg>;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: transparent;
     transform: translateX(-50%);
+}
+
+#basket svg {
+    width: 100%;
+    height: 100%;
 }
 
 .egg {
@@ -37,12 +42,6 @@ body {
     top: -50px;
     width: 40px;
     height: 50px;
-    background-image: url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 50">
-    <ellipse cx="20" cy="25" rx="20" ry="25" fill="#FFFDD0" stroke="#DAA520" stroke-width="2"/>
-</svg>
-');
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 #score-board {
@@ -51,4 +50,34 @@ body {
     left: 10px;
     font-size: 24px;
     color: #000;
+}
+
+#lives-board {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ff0000;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+#game-over button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }

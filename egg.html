@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Egg Catcher Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div id="game-container">
-        <div id="basket"></div>
+        <div id="basket">
+            <svg viewBox="0 0 100 50">
+                <rect width="100" height="50" fill="#8B4513" stroke="#654321" stroke-width="4" rx="10" />
+            </svg>
+        </div>
         <div id="score-board">Score: 0</div>
+        <div id="lives-board">Lives: 3</div>
+        <div id="game-over">
+            <p>Game Over</p>
+            <button onclick="restartGame()">Restart</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
