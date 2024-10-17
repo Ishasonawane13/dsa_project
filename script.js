@@ -5,7 +5,7 @@ const livesBoard = document.getElementById('lives-board');
 const gameOverScreen = document.getElementById('game-over');
 let score = 0;
 let lives = 7;
-let basketSpeed = 15;
+let basketSpeed = 25;
 let eggSpeed = 3;
 let basketPositionX = gameContainer.clientWidth / 2 - basket.clientWidth / 2;
 let isGameOver = false;
@@ -29,7 +29,7 @@ function dropEgg() {
 
     const egg = document.createElement('div');
     egg.classList.add('egg');
-    egg.style.left = Math.random() * (gameContainer.clientWidth - 40) + 'px';
+    egg.style.left = Math.random() * (gameContainer.clientWidth - 100) + 'px';
 
     const eggType = Math.random();
     if (eggType < 0.7) {
@@ -110,11 +110,10 @@ function restartGame() {
 setInterval(() => {
     if (!isGameOver) {
         dropEgg();
-        eggSpeed += 0.10; // Increase speed over time
+        eggSpeed += 0.05;
     }
 }, 1000);
 
-// Functions to get different types of eggs
 function getNormalEgg() {
     return `<svg viewBox="0 0 40 50">
                         <ellipse cx="20" cy="25" rx="20" ry="25" fill="#FFFDD0" stroke="#DAA520" stroke-width="2"/>

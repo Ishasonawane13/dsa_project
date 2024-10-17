@@ -12,9 +12,28 @@
 
     <div id="game-container">
         <div id="basket">
-            <svg viewBox="0 0 100 50">
-                <rect width="100" height="50" fill="#8B4513" stroke="#654321" stroke-width="4" rx="10" />
+            <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
+                <!-- Basket base -->
+                <rect x="40" y="160" width="400" height="120" fill="#A0522D" stroke="#8B4513" stroke-width="16"
+                    rx="60" />
+
+                <!-- Basket handle -->
+                <path d="M 40 160 Q 240 0 440 160" fill="none" stroke="#8B4513" stroke-width="20" />
+
+                <!-- Basket weaving -->
+                <line x1="60" y1="180" x2="420" y2="180" stroke="#8B4513" stroke-width="8" />
+                <line x1="60" y1="220" x2="420" y2="220" stroke="#8B4513" stroke-width="8" />
+                <line x1="60" y1="260" x2="420" y2="260" stroke="#8B4513" stroke-width="8" />
+
+                <!-- Decorative lines -->
+                <line x1="100" y1="160" x2="100" y2="280" stroke="#8B4513" stroke-width="8" />
+                <line x1="200" y1="160" x2="200" y2="280" stroke="#8B4513" stroke-width="8" />
+                <line x1="300" y1="160" x2="300" y2="280" stroke="#8B4513" stroke-width="8" />
+                <line x1="400" y1="160" x2="400" y2="280" stroke="#8B4513" stroke-width="8" />
             </svg>
+
+
+
         </div>
         <div id="score-board">Score: 0</div>
         <div id="lives-board">Lives: 3</div>
