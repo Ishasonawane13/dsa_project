@@ -1,0 +1,49 @@
+/* Basic styling for the game */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #87CEFA; /* Light blue sky */
+    border: 2px solid #000;
+}
+
+#basket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 50px;
+    background-image: url('basket.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+}
+
+.egg {
+    position: absolute;
+    top: -50px;
+    width: 40px;
+    height: 50px;
+    background-image: url('egg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#score-board {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #000;
+}
